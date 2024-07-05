@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //question 1
+     // Declare an empty array using JS literal notation to store
+     // student names in future.
+     var students = [];
+     students.push("Alice");
+     students.push("Bob");
+     students.push("Charlie");
+     console.log(students);
+
+
+
+     //question 2
+     //  Declare an empty array using JS object notation to store
+     // student names in future.
+     var persons = new Array();
+     persons.push("Alice");
+     persons.push("Bob");
+     persons.push("Charlie");
+     console.log(persons);
+
+
+
+    //question 3
+    // Declare and initialize a strings array.
+    var string1 = ["A","B","C"];
+    console.log(string1);
+
+
+
+    //question 4
+    // Declare and initialize a numbers array.
+    var number = [1,2,3];
+    console.log(number);
+
+
+
+    //question 5
+    // Declare and initialize a boolean array.
+    var booleans = [true,false];
+    console.log(booleans);
+
+
+
+    //question 6
+    // Declare and initialize a mixed array.
+    var mixed = [1,"A",true];
+    console.log(mixed);
+
+
+
+    //question 7
+    // Declare and Initialize an array and store available
+    // education qualifications in Pakistan (e.g. SSC, HSC, BCS,
+    // BS, BCOM, MS, M. Phil., PhD). Show the listed
+    // qualifications in your browser like:
+
+
+    var qualifications = ["SSC","HSC","BCS","BS","BCOM","MS","M. Phil.","PhD"];
+
+    for (let i = 0; i < qualifications.length; i++) {
+        console.log(qualifications[i]);
+    };
+
+    //question 8
+    // Write a program to store 3 student names in an array.Take
+    // another array to store score of these three students.
+    // Assume that total marks are 500 for each student, display
+    // the scores & percentages of students like:
+    // A. Student 1 - Score 320 & Percentage 64%
+    // B. Student 2 - Score 230 & Percentage 46%
+    // C. Student 3 - Score 480 & Percentage 96%
+
+    var students = ["Aqsa","Omaima","Misbah"];
+    var scores = [320,230,480];
+    var total = 500;
+    for(var i=0; i<students.length; i++){
+        var percentage = scores[i]/total*100;
+        console.log(`${students[i]} - Score ${scores[i]} & Percentage ${percentage}%`);
+    };
+
+    //question 9
+    // Initialize an array with color names. Display the array
+    // elements in your browser.
+    // a. Ask the user what color he/she wants to add to the
+    // beginning & add that color to the beginning of the array.
+    // Display the updated array in your browser.
+    // b. Ask the user what color he/she wants to add to the end
+    // & add that color to the end of the array. Display the
+    // updated array in your browser.
+    // c. Add two more color to the beginning of the array.
+    // Display the updated array in your browser.
+    // d. Delete the first color in the array. Display the updated
+    // array in your browser.
+    // e. Delete the last color in the array. Display the updated
+    // array in your browser.
+    // f. Ask the user at which index he/she wants to add a color
+    // & color name. Then add the color to desired
+    // position/index. . Display the updated array in your
+    // browser.
+    // g. Ask the user at which index he/she wants to delete
+    // color(s) & how many colors he/she wants to delete. Then
+    // remove the same number of color(s) from user-defined
+    // position/index. Display the updated array in your
+    // browser.
+    var colors = ["red","green","blue"];
+    console.log(colors);
+
+    var color = prompt("Enter a color");
+    colors.unshift("pink");
+    console.log(colors);
+    
+    var color = prompt("Enter a color");
+    colors.push("Black");
+    console.log(colors);
+
+    var color = prompt("Enter a color");
+    colors.unshift("red","green");
+    console.log(colors);
+    colors.shift();
+    console.log(colors);
+
+    colors.pop();
+    console.log(colors);
+
+    var color1 = prompt("Enter a color");
+    var index = prompt("Enter an index");
+    colors.splice(index,0,color1);
+    console.log(colors);
+
+    var color2 = prompt("Enter a color");
+    var index2 = prompt("Enter an index");
+    var number = prompt("Enter a number");
+    colors.splice(1,1,"purple","orange");
+    console.log(colors);
+
+
+    //question 10
+    // Write a program to store student scores in an array &
+    // sort the array in ascending order using Array’s sort
+    // method.
+
+    var scores = [320,230,480,120];
+    scores.sort();
+    console.log(scores);
+    
+    //question 11
+    // Write a program to initialize an array with city names.
+    // Copy 3 array elements from cities array to selectedCities
+    // array.
+
+    var cities = ["Karachi","Lahore","Islamabad","Quetta","Peshawar"];
+    var selectedCities = cities.slice(0,3);
+    console.log(selectedCities);
+
+    //question 12
+    // Write a program to create a single string from the
+    // below mentioned array:
+    // var arr = [“This ”, “ is ”, “ my ”, “ cat”];
+    // (Use array’s join method)
+
+    var arr = ["This "," is "," my "," cat"];
+    var string = arr.join("");
+    console.log(string);
+
+    //question 13
+    //Create a new array. Store values one by one in such a way
+    //that you can access the values in the order in which they
+    //were stored. (FIFO-First In First Out)
+
+    var cities1 = ["Karachi","Lahore","Islamabad","Quetta","Peshawar"];
+    var selectedCities = cities1.slice(0,3);
+    console.log(selectedCities);
+
+
+    //question 14
+    // Create a new array. Store values one by one in such a way
+    // that you can access the values in reverse order. (Last In- First Out)
+
+    var cities2 = ["Karachi","Lahore","Islamabad","Quetta","Peshawar"];
+    cities2.reverse();
+    console.log(cities2);
+
+    //questio 15
+    //Write a program to store phone manufacturers (Apple,
+   // Samsung, Motorola, Nokia, Sony & Haier) in an array.
+   // Display the following dropdown/select menu in your
+   // browser using document.write() method:  
+
+   var manufacturers = ["Apple","Samsung","Motorola","Nokia","Sony","Haier"];
+   document.write("<select>");
+   for(var i= 0; i < manufacturers.length; i++){
+    document.write(`<option>${manufacturers[i]}</option>`);
+   };
+
+
+</script>
+</body>
+</html>
